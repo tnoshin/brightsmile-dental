@@ -424,7 +424,7 @@ textarea {
 .grid {
     padding-right: 10%;
     display: grid;
-    grid-template-columns: 2.8fr 1.5fr;
+    grid-template-columns: 2fr 1.5fr;
     padding-bottom: 5%;
 }
 select{
