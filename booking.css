@@ -1,0 +1,570 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #F8FEFD;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: rgba(26, 26, 46, 1);
+}
+
+nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    min-height: 64px;
+    padding: 10px 10%;
+    background-color: white;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgba(26, 26, 46, 0.793);
+    font-weight: 400;
+}
+
+.bsdi {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bsd {
+    font-size: 21px;
+    font-weight: bold;
+    color: rgba(26, 26, 46, 1);
+}
+
+.lucide-smile {
+    background-color: rgba(8, 145, 178, 1);
+    color: white;
+    height: 40px;
+    width: 40px;
+    padding: 8px;
+    border-radius: 25%;
+    flex-shrink: 0;
+}
+
+.rest {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 17px;
+}
+
+
+.ba {
+    background-color: rgba(8, 145, 178, 1);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 10px 24px;
+    font-weight: 550;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: rgba(26, 26, 46, 0.793);
+    border-radius: 2px;
+}
+
+.midsection {
+    padding-left: 100px;
+    padding-top: 16vh;
+}
+
+.current {
+    padding-bottom: 35px;
+}
+
+.current a {
+    color: rgba(100, 116, 139, 1);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.top {
+    padding-right: 100px;
+}
+
+.topb h1 {
+    font-size: 36px;
+    color: rgba(26, 26, 46, 1);
+    padding-bottom: 15px;
+    font-weight: 700;
+}
+
+.topb p {
+    color: rgba(100, 116, 139, 1);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.benefits {
+    display: flex;
+    gap: 20px;
+    margin-top: 28px;
+}
+
+.bi {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: rgba(100, 116, 139, 1);
+    font-size: 14px;
+    padding: 18px 22px;
+    background: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+}
+
+.highlights {
+    color: rgba(8, 145, 178, 1);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.sidebar-card {
+    background: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 28px;
+}
+
+.sidebar-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: rgba(26, 26, 46, 1);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar-title svg {
+    color: rgba(8, 145, 178, 1);
+    flex-shrink: 0;
+}
+
+.contact-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(8, 145, 178, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: rgba(8, 145, 178, 1);
+}
+
+.contact-text {
+    font-size: 14px;
+    color: rgba(100, 116, 139, 1);
+    line-height: 1.6;
+}
+
+.contact-text strong {
+    color: rgba(26, 26, 46, 1);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.contact-text a {
+    color: rgba(8, 145, 178, 1);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.hours-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #F1F5F9;
+    font-size: 14px;
+}
+
+.hours-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.hours-row:first-child {
+    padding-top: 0;
+}
+
+.hours-day {
+    color: rgba(26, 26, 46, 0.8);
+    font-weight: 500;
+}
+
+.hours-time {
+    color: rgba(100, 116, 139, 1);
+}
+
+.hours-closed {
+    color: #ef4444;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.expect-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.expect-item:last-child {
+    margin-bottom: 0;
+}
+
+.expect-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(8, 145, 178, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.expect-icon svg {
+    color: rgba(8, 145, 178, 1);
+}
+
+.expect-text {
+    font-size: 14px;
+    color: rgba(26, 26, 46, 0.75);
+    line-height: 1.5;
+}
+
+.expect-text strong {
+    color: rgba(26, 26, 46, 1);
+    font-weight: 600;
+}
+
+.footer {
+    background-color: rgba(26, 26, 46, 1);
+    margin-top: 0px;
+}
+
+.footers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 3.5% 10%;
+    gap: 30px;
+}
+
+.footern {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.footern .lucide-smile {
+    width: 36px;
+    height: 36px;
+    padding: 6px;
+}
+
+.footern2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.f1 p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 4px;
+}
+
+.hfooter {
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 18px;
+}
+
+.hfooterd {
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 18px;
+}
+
+.fd {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.map,
+.phone,
+.mail,
+.clock {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 14px;
+}
+
+.iconf,
+.iphone,
+.imail,
+.iclock {
+    margin-top: 2px;
+}
+
+.fdd {
+    font-size: 14px;
+    line-height: 2.2;
+}
+
+.fdd a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.fdd a:hover {
+    color: rgba(8, 145, 178, 1);
+}
+
+.separate {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0px 10%;
+    border-top: 1px solid rgba(255, 255, 255, 0.138);
+    padding-top: 25px;
+    padding-bottom: 60px;
+    letter-spacing: 1.2px;
+    font-size: 14px;
+}
+
+.forms {
+    padding-top: 5%;
+}
+p{
+    padding: 10px;
+    font-size: 17px;
+}
+/* This targets all the text, date, time, and email boxes */
+input[type="text"], 
+input[type="date"], 
+input[type="time"], 
+input[type="number"], 
+input[type="email"], 
+textarea {
+    width: 100%;           /* Makes the boxes stretch to the container width */
+    max-width: 300px;      /* Stops them from getting TOO wide on big screens */
+    padding: 12px 15px;    /* Adds space inside: 12px top/bottom, 15px left/right */
+    margin-top: 8px;       /* Adds a little space between the label and the box */
+    border: 1px solid #ccc;
+    border-radius: 8px;    /* Gives those nice soft rounded corners */
+    box-sizing: border-box; /* Crucial: keeps padding from breaking the width */
+}
+
+/* Specific styling for the textarea to give it more height */
+textarea {
+    min-height: 100px;
+    resize: vertical;      /* Allows the user to only pull it down, not sideways */
+}
+.grid {
+    padding-right: 10%;
+    display: grid;
+    grid-template-columns: 2.8fr 1.5fr;
+    padding-bottom: 5%;
+}
+select{
+    width: 100%;           /* Makes the boxes stretch to the container width */
+    max-width: 300px;      /* Stops them from getting TOO wide on big screens */
+    padding: 12px 15px;    /* Adds space inside: 12px top/bottom, 15px left/right */
+    margin-top: 8px;       /* Adds a little space between the label and the box */
+    border: 1px solid #ccc;
+    border-radius: 8px;    /* Gives those nice soft rounded corners */
+    box-sizing: border-box;    
+}
+span {
+    display: inline;       /* This is the default, but ensures it never breaks */
+    margin-left: 2px;      /* Adds a tiny gap between the name and the red star */
+    font-size: 15px;
+}
+/* for phone .button-container{
+    display: flex;
+    justify-content: center;
+} */
+.button-container{
+    margin-left: 15%;
+    margin-top: 7%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+
+}
+.submit{
+    width: 150px;
+    height: 50px;
+    background-color: rgba(8, 145, 178, 1);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 10px 24px;
+    font-weight: 550;
+    cursor: pointer;
+}
+@media (max-width: 1100px) {
+    .booking-grid {
+        grid-template-columns: 1fr;
+        padding-right: 40px;
+    }
+
+    .sidebar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .midsection {
+        padding-left: 40px;
+    }
+
+    .top {
+        padding-right: 40px;
+    }
+    .grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .rest {
+        display: none;
+        position: absolute;
+        top: 8vh;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        border-bottom: 1px solid #E2E8F0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        gap: 16px;
+    }
+
+    .rest.open {
+        display: flex;
+    }
+
+    .midsection {
+        padding-left: 20px;
+        padding-top: 12vh;
+    }
+
+    .top {
+        padding-right: 20px;
+    }
+
+    .topb h1 {
+        font-size: 26px;
+    }
+
+    .benefits {
+        flex-direction: column;
+    }
+
+    .form-card {
+        padding: 24px;
+    }
+
+    .sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .footers {
+        grid-template-columns: 1fr 1fr;
+        padding: 8% 6%;
+    }
+
+    .step-label {
+        display: none;
+    }
+
+    .step-line {
+        margin: 0 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 10px 5%;
+    }
+
+    .bsd {
+        font-size: 17px;
+    }
+
+    .footers {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 374px) {
+    .midsection {
+        padding-top: 25vh;
+    }
+}
