@@ -8,7 +8,7 @@ document.querySelector(`form`).addEventListener(`submit`, function (event) {
     } else if (document.querySelector('#surname').value === ''){
         event.preventDefault();
         alert('Please fill in your last name.')   
-    } else if (document.querySelector('#time'),value === ``){
+    } else if (document.querySelector('#time').value === ``){
         event.preventDefault();
         alert('PLease provide the time you would like to take an appointment for.');
     } else if (document.querySelector(`#number`).value === ``) {
