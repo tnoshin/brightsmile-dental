@@ -110,9 +110,6 @@ nav a {
     font-size: 16px;
 }
 
-.top {
-    padding-right: 100px;
-}
 
 .topb h1 {
     font-size: 36px;
@@ -120,7 +117,12 @@ nav a {
     padding-bottom: 15px;
     font-weight: 700;
 }
-
+.top{
+    display: flex;
+    flex-direction: row;
+    padding-right: 100px;
+    padding-bottom: 50px;
+}
 .topb p {
     color: rgba(100, 116, 139, 1);
     font-size: 16px;
@@ -485,6 +487,11 @@ span {
     }
     .grid{
         grid-template-columns: 1fr;
+    }
+    .top{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
     }
 }
 
