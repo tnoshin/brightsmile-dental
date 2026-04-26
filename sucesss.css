@@ -350,24 +350,113 @@ span {
     .step-line {
         margin: 0 8px;
     }
+
+    /* Main content responsiveness */
+    div[style*="text-align: center"] {
+        padding: 20% 15px !important;
+        margin-top: 8vh;
+    }
+
+    div[style*="text-align: center"] h1 {
+        font-size: 28px !important;
+    }
+
+    div[style*="text-align: center"] p {
+        font-size: 16px !important;
+        padding: 5px !important;
+    }
+
+    div[style*="text-align: center"] a {
+        font-size: 14px !important;
+        padding: 10px 24px !important;
+    }
 }
 
 @media (max-width: 480px) {
     nav {
         padding: 10px 5%;
+        height: auto;
+        min-height: 56px;
     }
 
     .bsd {
-        font-size: 17px;
+        font-size: 16px;
+    }
+
+    .lucide-smile {
+        height: 32px;
+        width: 32px;
+        padding: 6px;
     }
 
     .footers {
         grid-template-columns: 1fr;
+        padding: 6% 5%;
+        gap: 20px;
+    }
+
+    /* Main content responsiveness */
+    div[style*="text-align: center"] {
+        padding: 15% 12px !important;
+        margin-top: 8vh;
+    }
+
+    div[style*="text-align: center"] h1 {
+        font-size: 24px !important;
+    }
+
+    div[style*="text-align: center"] p {
+        font-size: 14px !important;
+        padding: 0 !important;
+        line-height: 1.6;
+    }
+
+    div[style*="text-align: center"] a {
+        font-size: 13px !important;
+        padding: 10px 20px !important;
+    }
+
+    .fd {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .hfooter,
+    .hfooterd {
+        font-size: 14px;
+    }
+
+    .separate {
+        padding-top: 20px;
+        padding-bottom: 40px;
+        margin: 0 5%;
+        font-size: 12px;
     }
 }
 
 @media (max-width: 374px) {
-    .midsection {
-        padding-top: 25vh;
+    nav {
+        padding: 8px 5%;
+    }
+
+    .bsd {
+        font-size: 14px;
+    }
+
+    div[style*="text-align: center"] {
+        padding: 25% 10px !important;
+    }
+
+    div[style*="text-align: center"] h1 {
+        font-size: 20px !important;
+    }
+
+    div[style*="text-align: center"] p {
+        font-size: 13px !important;
+    }
+
+    div[style*="text-align: center"] a {
+        font-size: 12px !important;
+        padding: 8px 16px !important;
     }
 }
