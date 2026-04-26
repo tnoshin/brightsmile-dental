@@ -166,7 +166,6 @@ h1 {
     flex-direction: row;
     gap: 15px;
     flex-wrap: wrap;
-    padding: 40px 10px;
 }
 
 .sv,
@@ -290,6 +289,10 @@ h1 {
     color: rgba(100, 116, 139, 1);
     line-height: 1.6;
 }
+.buttons{
+    padding: 40px 10px;
+}
+
 
 /* =========================================
    WHY CHOOSE US
