@@ -21,7 +21,5 @@ document.querySelector('form').addEventListener('submit', function(event) {
     } else if (document.querySelector('#date').value === '') {
         event.preventDefault();
         alert('Please select a date.');
-    } else {
-        alert('Your appointment has been submitted successfully!');
     }
 });
