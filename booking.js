@@ -22,3 +22,29 @@ document.querySelector(`form`).addEventListener(`submit`, function (event) {
         alert(`Please select a date, we are available all days of the week except Sunday.`);
     }
 })
+const form = document.querySelector('forms');
+const successMsg = document.getElementById('successMsg');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Stop the form from submitting immediately
+
+    // Collect form data
+    const formData = new FormData(form);
+
+    // Send to Web3Forms manually
+    fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+    })
+    .then(function(response) {
+        if (response.ok) {
+            successMsg.style.display = 'block'; // Show success message
+            form.reset(); // Clear the form
+        } else {
+            alert('Something went wrong. Please try again.');
+        }
+    })
+    .catch(function(error) {
+        alert('Something went wrong. Please try again.');
+    });
+});
