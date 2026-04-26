@@ -467,6 +467,22 @@ span {
     font-weight: 550;
     cursor: pointer;
 }
+.success-message{
+    display: none;
+    position: absolute;
+    top: 8vh;
+    left: 0;
+    right: 0;
+    height: 14vh;
+    background-color: #0891B2;
+    padding-left: 10%;
+    padding-top: 1.1%;
+    font-size: 23px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    line-height: 1.6;
+    word-spacing: 1.4;
+}
 @media (max-width: 1100px) {
     .booking-grid {
         grid-template-columns: 1fr;
