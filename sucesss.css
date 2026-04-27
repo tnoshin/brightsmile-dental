@@ -264,31 +264,20 @@ textarea {
 
 select {
     width: 100%;
-    /* Makes the boxes stretch to the container width */
     max-width: 300px;
-    /* Stops them from getting TOO wide on big screens */
     padding: 12px 15px;
-    /* Adds space inside: 12px top/bottom, 15px left/right */
     margin-top: 8px;
-    /* Adds a little space between the label and the box */
     border: 1px solid #ccc;
     border-radius: 8px;
-    /* Gives those nice soft rounded corners */
     box-sizing: border-box;
 }
 
 span {
     display: inline;
-    /* This is the default, but ensures it never breaks */
-    margin-left: 2px;
-    /* Adds a tiny gap between the name and the red star */
+    margin-left: 2px;/
     font-size: 15px;
 }
 
-/* for phone .button-container{
-    display: flex;
-    justify-content: center;
-} */
 .button-container {
     margin-left: 15%;
     margin-top: 7%;
@@ -310,9 +299,18 @@ span {
     font-weight: 550;
     cursor: pointer;
 }
+.maps{
+    width: 100%;
+}
+iframe{
+    height: 100%;
+    border-radius: 25px;
+}
 
 @media (max-width: 1100px) {
-
+    iframe{
+        height: 250px;
+    }
 }
 
 @media (max-width: 768px) {
