@@ -409,13 +409,13 @@ input[type="time"],
 input[type="number"], 
 input[type="email"], 
 textarea {
-    width: 100%;           /* Makes the boxes stretch to the container width */
-    max-width: 300px;      /* Stops them from getting TOO wide on big screens */
-    padding: 12px 15px;    /* Adds space inside: 12px top/bottom, 15px left/right */
-    margin-top: 8px;       /* Adds a little space between the label and the box */
+    width: 100%;     
+    max-width: 300px;      
+    padding: 12px 15px;    
+    margin-top: 8px;      
     border: 1px solid #ccc;
-    border-radius: 8px;    /* Gives those nice soft rounded corners */
-    box-sizing: border-box; /* Crucial: keeps padding from breaking the width */
+    border-radius: 8px;    
+    box-sizing: border-box;
 }
 
 /* Specific styling for the textarea to give it more height */
@@ -426,21 +426,21 @@ textarea {
 .grid {
     padding-right: 10%;
     display: grid;
-    grid-template-columns: 2fr 1.5fr;
+    grid-template-columns: 2fr 2fr;
     padding-bottom: 5%;
 }
 select{
-    width: 100%;           /* Makes the boxes stretch to the container width */
-    max-width: 300px;      /* Stops them from getting TOO wide on big screens */
-    padding: 12px 15px;    /* Adds space inside: 12px top/bottom, 15px left/right */
-    margin-top: 8px;       /* Adds a little space between the label and the box */
+    width: 100%;           
+    max-width: 300px;      
+    padding: 12px 15px;    
+    margin-top: 8px;       
     border: 1px solid #ccc;
-    border-radius: 8px;    /* Gives those nice soft rounded corners */
+    border-radius: 8px;   
     box-sizing: border-box;    
 }
 span {
-    display: inline;       /* This is the default, but ensures it never breaks */
-    margin-left: 2px;      /* Adds a tiny gap between the name and the red star */
+    display: inline;       
+    margin-left: 2px;     
     font-size: 15px;
 }
 /* for phone .button-container{
