@@ -443,7 +443,7 @@ textarea {
 .grid {
     padding-right: 10%;
     display: grid;
-    grid-template-columns: 2.8fr 1.5fr;
+    grid-template-columns: 2fr 2fr;
     padding-bottom: 5%;
 }
 
