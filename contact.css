@@ -482,6 +482,13 @@ span {
     padding: 40px 10px;
 
 }
+.maps{
+    width: 100%;
+}
+iframe{
+    height: 100%;
+    border-radius: 25px;
+}
 
 .submit {
     width: 150px;
@@ -517,6 +524,9 @@ span {
 
     .grid {
         grid-template-columns: 1fr;
+    }
+    iframe{
+        height: 250px;
     }
 }
 
