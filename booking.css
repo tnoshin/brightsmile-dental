@@ -320,7 +320,13 @@ nav a {
     height: 36px;
     padding: 6px;
 }
-
+.maps{
+    width: 100%;
+}
+iframe{
+    height: 100%;
+    border-radius: 25px;
+}
 .footern2 {
     font-size: 18px;
     font-weight: bold;
@@ -508,6 +514,9 @@ span {
         display: flex;
         flex-direction: column;
         padding-bottom: 20px;
+    }
+    iframe{
+        height: 250px;
     }
 }
 
