@@ -1,3 +1,29 @@
+:root {
+    --bg-body: #F8FEFD;
+    --bg-nav: white;
+    --bg-bsd: rgba(26, 26, 46, 1);
+    --bg-rest: rgba(26, 26, 46, 0.793);
+    --bg-hamburger: rgba(26, 26, 46, 0.8);
+    --bg-rest: white;
+    --bd-nav: 1px solid #E2E8F0;
+    --bg-title: #1a1a2e;
+    --bg-forms:#1a1a2e;
+    --bg-h1:rgba(26, 26, 46, 1);
+}
+
+body.dark {
+    --bg-body: #182D40;
+    --bg-nav: rgba(15, 23, 42, 1);
+    --bg-bsd: white;
+    --bg-rest: white;
+    --bg-hamburger: white;
+    --bg-rest: rgba(15, 23, 42, 1);
+    --bd-nav: 1px solid #111a30;
+    --bg-title: white;
+    --bg-forms:white;
+    --bg-h1:rgb(208, 208, 208);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +33,7 @@ html{
     scroll-behavior: smooth;
 }
 body {
-    background-color: #F8FEFD;
+    background-color: var(--bg-body);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     color: rgba(26, 26, 46, 1);
 }
@@ -22,16 +48,9 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: 8vh;
-    min-height: 64px;
-    padding: 10px 10%;
-    background-color: white;
-    border-bottom: 1px solid #E2E8F0;
-}
-
-nav a {
-    text-decoration: none;
-    color: rgba(26, 26, 46, 0.793);
-    font-weight: 400;
+    padding: 10px 8%;
+    background-color: var(--bg-nav);
+    border-bottom: var(--bd-nav);
 }
 
 .bsdi {
@@ -43,10 +62,11 @@ nav a {
 .bsd {
     font-size: 21px;
     font-weight: bold;
-    color: rgba(26, 26, 46, 1);
+    color: var(--bg-bsd);
+    text-decoration: none;
 }
 
-.lucide-smile {
+.lucide.lucide-smile-icon.lucide-smile {
     background-color: rgba(8, 145, 178, 1);
     color: white;
     height: 40px;
@@ -63,6 +83,16 @@ nav a {
     font-size: 17px;
 }
 
+.rest a {
+    text-decoration: none;
+    color: var(--bg-title);
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.rest a:hover {
+    color: rgba(8, 145, 178, 1);
+}
 
 .ba {
     background-color: rgba(8, 145, 178, 1);
@@ -75,24 +105,39 @@ nav a {
     cursor: pointer;
     display: flex;
     align-items: center;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+}
+
+.ba:hover {
+    background-color: rgba(6, 120, 150, 1);
+}
+
+.ba a {
+    text-decoration: none;
+    color: white;
 }
 
 .hamburger {
     display: none;
     flex-direction: column;
-    gap: 5px;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 4px;
+    padding: 5px;
+    gap: 6px;
 }
 
 .hamburger span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: rgba(26, 26, 46, 0.793);
+    background-color: var(--bg-hamburger);
+    width: 25px;
+    height: 3px;
     border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.moonphn {
+    display: none;
 }
 
 .midsection {
@@ -113,7 +158,7 @@ nav a {
 
 .topb h1 {
     font-size: 36px;
-    color: rgba(26, 26, 46, 1);
+    color: var(--bg-h1);
     padding-bottom: 15px;
     font-weight: 700;
 }
@@ -403,10 +448,12 @@ iframe{
 
 .forms {
     padding-top: 5%;
+    color: var(--bg-forms);
 }
 p{
     padding: 10px;
     font-size: 17px;
+    color: var(--bg-h1);
 }
 /* This targets all the text, date, time, and email boxes */
 input[type="text"], 
@@ -538,10 +585,21 @@ span {
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         gap: 16px;
     }
-
     .rest.open {
         display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: calc(8vh);
+        left: 0;
+        right: 0;
+        background-color:var(--bg-rest);
+        padding: 20px 5%;
+        gap: 15px;
+        border-bottom: 1px solid #E2E8F0;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        z-index: 99;
     }
+
 
     .midsection {
         padding-left: 20px;
@@ -579,6 +637,19 @@ span {
 
     .step-line {
         margin: 0 8px;
+    }
+    .moon{
+        display: none;
+    }
+    .moonphn{
+        display: block;
+        background: none;
+        border: none;
+    }
+    .nightmode{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
     }
 }
 

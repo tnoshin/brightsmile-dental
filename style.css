@@ -1,3 +1,45 @@
+:root {
+    --bg-body: #F8FEFD;
+    --bg-nav: white;
+    --bg-h1: rgba(26, 26, 46, 1);
+    --bg-bsd: rgba(26, 26, 46, 1);
+    --bg-spanh4: rgba(100, 116, 139, 1);
+    --bg-lm: color: rgba(8, 145, 178, 1);
+    --bg-rest: rgba(26, 26, 46, 0.793);
+    --bg-servicei: white;
+    --bg-title: #1a1a2e;
+    --bg-des: #64748b;
+    --bg-wcu: #EDFEFE;
+    --bg-service: white;
+    --bg-titlewcu: rgba(26, 26, 46, 1);
+    --bg-deswcu: rgba(100, 116, 139, 1);
+    --bg-wops: rgba(240, 253, 250, 1);
+    --bg-hamburger:rgba(26, 26, 46, 0.8);
+    --bg-rest: white;
+    --bd-nav: 1px solid #E2E8F0;
+}
+
+body.dark {
+    --bg-body: #182D40;
+    --bg-nav: rgba(15, 23, 42, 1);
+    --bg-h1: white;
+    --bg-bsd: white;
+    --bg-spanh4: rgba(148, 163, 184, 1);
+    --bg-lm: color: rgba(8, 145, 178, 1);
+    --bg-rest: white;
+    --bg-servicei: rgba(30, 41, 59, 1);
+    --bg-title: white;
+    --bg-des: rgba(148, 163, 184, 1);
+    --bg-wcu: #1D3D4F;
+    --bg-service: #1E293B;
+    --bg-titlewcu: white;
+    --bg-deswcu: rgb(217, 217, 217);
+    --bg-wops: rgba(30, 41, 59, 1);
+    --bg-hamburger:white;
+    --bg-rest: rgba(15, 23, 42, 1);
+    --bd-nav: 1px solid #111a30;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,9 +51,10 @@ html {
 }
 
 body {
-    background-color: #F8FEFD;
+    background-color: var(--bg-body);
     font-family: 'Inter', sans-serif;
 }
+
 
 /* =========================================
    NAVIGATION
@@ -27,8 +70,8 @@ nav {
     align-items: center;
     height: 8vh;
     padding: 10px 8%;
-    background-color: white;
-    border-bottom: 1px solid #E2E8F0;
+    background-color: var(--bg-nav);
+    border-bottom: var(--bd-nav);
 }
 
 .bsdi {
@@ -40,7 +83,7 @@ nav {
 .bsd {
     font-size: 21px;
     font-weight: bold;
-    color: rgba(26, 26, 46, 1);
+    color: var(--bg-bsd);
     text-decoration: none;
 }
 
@@ -63,7 +106,7 @@ nav {
 
 .rest a {
     text-decoration: none;
-    color: rgba(26, 26, 46, 0.793);
+    color: var(--bg-title);
     font-weight: 400;
     transition: color 0.3s ease;
 }
@@ -107,13 +150,15 @@ nav {
 }
 
 .hamburger span {
+    background-color: var(--bg-hamburger);
     width: 25px;
     height: 3px;
-    background-color: rgba(26, 26, 46, 0.8);
     border-radius: 2px;
     transition: all 0.3s ease;
 }
-
+.moonphn{
+    display: none;
+}
 /* =========================================
    HERO SECTION
    ========================================= */
@@ -139,7 +184,7 @@ nav {
 }
 
 h1 {
-    color: rgba(26, 26, 46, 1);
+    color: var(--bg-h1);
     font-size: 50px;
     font-weight: 780;
     line-height: 1.2;
@@ -147,7 +192,7 @@ h1 {
 }
 
 .h4 {
-    color: rgba(100, 116, 139, 1);
+    color: var(--bg-spanh4);
     font-size: 18px;
     font-weight: 300;
     line-height: 1.6;
@@ -196,7 +241,7 @@ h1 {
 }
 
 .lm {
-    background-color: white;
+    background: none;
     color: rgba(8, 145, 178, 1);
 }
 
@@ -208,19 +253,23 @@ h1 {
     width: 100%;
     height: 60vh;
     border-radius: 20px;
-    box-shadow: 0px 0px 20px #DAE1E1;
     object-fit: cover;
+}
+
+.buttons {
+    padding: 40px 10px;
 }
 
 /* =========================================
    SERVICES SECTION
    ========================================= */
 .servicesection {
-    background-color: white;
+    background-color: var(--bg-nav);
     padding: 60px 8%;
 }
 
 .h2 {
+    color: var(--bg-h1);
     text-align: center;
     font-size: 36px;
     font-weight: 800;
@@ -230,7 +279,7 @@ h1 {
 .h3 {
     text-align: center;
     font-size: 18px;
-    color: rgba(100, 116, 139, 1);
+    color: var(--bg-spanh4);
     margin-bottom: 40px;
     max-width: 600px;
     margin-left: auto;
@@ -246,6 +295,7 @@ h1 {
 .servicei {
     border: 1px solid #E8EDF3;
     border-radius: 13px;
+    background-color: var(--bg-servicei);
     padding: 0;
     transition: box-shadow 0.3s ease;
 }
@@ -279,26 +329,21 @@ h1 {
     padding: 0 24px;
     font-size: 20px;
     font-weight: 700;
-    color: rgba(26, 26, 46, 1);
+    color: var(--bg-title);
     margin-top: 15px;
 }
 
 .des {
     padding: 10px 24px 24px;
     font-size: 16px;
-    color: rgba(100, 116, 139, 1);
+    color: var(--bg-des);
     line-height: 1.6;
 }
-.buttons{
-    padding: 40px 10px;
-}
-
 
 /* =========================================
    WHY CHOOSE US
    ========================================= */
 .why-choose-us {
-    background-color: #EDFEFE;
     padding: 60px 8%;
 }
 
@@ -307,12 +352,13 @@ h1 {
     font-size: 36px;
     font-weight: 800;
     margin-bottom: 20px;
+    color: var(--bg-title);
 }
 
 .h3wcu {
     text-align: center;
     font-size: 18px;
-    color: rgba(100, 116, 139, 1);
+    color: var(--bg-des);
     margin-bottom: 40px;
     max-width: 600px;
     margin-left: auto;
@@ -328,9 +374,8 @@ h1 {
 .wcu {
     border: 2px solid #E8EDF3;
     padding: 40px 25px;
-    box-shadow: 0px 0px 20px #E9F8F7;
     border-radius: 13px;
-    background-color: white;
+    background-color: var();
     text-align: center;
     transition: box-shadow 0.3s ease;
 }
@@ -360,14 +405,14 @@ h1 {
 }
 
 .titlewcu {
-    color: rgba(26, 26, 46, 1);
+    color: var(--bg-titlewcu);
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 15px;
 }
 
 .deswcu {
-    color: rgba(100, 116, 139, 1);
+    color: var(--bg-deswcu);
     font-size: 16px;
     line-height: 1.7;
     letter-spacing: 0.2px;
@@ -377,7 +422,7 @@ h1 {
    TESTIMONIALS
    ========================================= */
 .whatpatientssay {
-    background-color: white;
+    background-color: var(--bg-nav);
     padding: 60px 8%;
 }
 
@@ -386,12 +431,13 @@ h1 {
     font-size: 36px;
     font-weight: 800;
     margin-bottom: 20px;
+    color: var(--bg-title);
 }
 
 .h3wops {
     text-align: center;
     font-size: 18px;
-    color: rgba(100, 116, 139, 1);
+    color: var(--bg-des);
     margin-bottom: 40px;
     max-width: 600px;
     margin-left: auto;
@@ -407,7 +453,7 @@ h1 {
 .wops {
     border: 1px solid #E8EDF3;
     border-radius: 13px;
-    background-color: rgba(240, 253, 250, 1);
+    background-color: var(--bg-wops);
     padding: 30px 25px;
     transition: box-shadow 0.3s ease;
 }
@@ -424,6 +470,7 @@ h1 {
 
 .deswops {
     color: rgb(29, 40, 54);
+    color: var(--bg-deswcu);
     font-size: 16px;
     line-height: 1.7;
     margin-bottom: 20px;
@@ -546,6 +593,15 @@ h6 {
     margin-bottom: 20px;
 }
 
+.maps {
+    width: 100%;
+}
+
+iframe {
+    height: 100%;
+    border-radius: 25px;
+}
+
 .fd,
 .fdd {
     line-height: 1.8;
@@ -574,13 +630,7 @@ h6 {
     align-items: center;
     margin-top: 2px;
 }
-.maps{
-    width: 100%;
-}
-iframe{
-    height: 100%;
-    border-radius: 25px;
-}
+
 
 .separate {
     text-align: center;
@@ -642,7 +692,8 @@ iframe{
     .footer {
         padding: 40px 5%;
     }
-    iframe{
+
+    iframe {
         height: 250px;
     }
 }
@@ -674,7 +725,7 @@ iframe{
         top: calc(8vh);
         left: 0;
         right: 0;
-        background-color: white;
+        background-color:var(--bg-rest);
         padding: 20px 5%;
         gap: 15px;
         border-bottom: 1px solid #E2E8F0;
@@ -700,6 +751,11 @@ iframe{
 
     .hamburger {
         display: flex;
+    }
+    .nightmode{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
     }
 
     /* --- HERO --- */
@@ -736,6 +792,14 @@ iframe{
         width: 100%;
         height: 30vh;
         order: -1;
+    }
+    .moon{
+        display: none;
+    }
+    .moonphn{
+        display: block;
+        background: none;
+        border: none;
     }
 
     /* --- GENERAL SECTIONS --- */
