@@ -307,5 +307,32 @@
     </div>
 </body>
 <script src="script.js"></script>
+    <!-- Chatbot Bubble -->
+<div class="chat-bubble" id="chatBubble" onclick="toggleChat()">
+    <i class="fa-solid fa-comment-dots"></i>
+</div> 
+
+<!-- Chat Window -->
+<div class="chat-window" id="chatWindow">
+    <div class="chat-header">
+        <span class="chat-title">Dental Assistant </span> <!-- Customer message -->
+        <button class="chat-close" onclick="toggleChat()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-input-area">
+        <input
+            type="text"
+            id="chatInput"
+            class="chat-input"
+            placeholder="Type a message..."
+            onkeydown="handleKey(event)"
+        />
+        <button class="chat-send" onclick="sendMessage()">
+            <i class="fa-solid fa-paper-plane"></i>
+        </button>
+    </div>
+</div>
 
 </html>
