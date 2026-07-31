@@ -1301,6 +1301,9 @@ body.dark .chat-msg.user {
     color: #014a5d;
 }
 
+body.dark .alert{
+    color: white;
+}
 @media (max-width: 768px) {
     .chat-window {
         width: calc(100vw - 40px);
@@ -1311,5 +1314,8 @@ body.dark .chat-msg.user {
     .chat-bubble {
         right: 20px;
         bottom: 20px;
+    }
+    .alert{
+        font-size: 9px;
     }
 }
