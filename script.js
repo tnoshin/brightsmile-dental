@@ -23,7 +23,7 @@ document.addEventListener('click', (e) => {
 
 function toggleDark(button) {
     document.body.classList.toggle('dark');
-    button.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+    button.textContent = document.body.classList.contains('dark') ? '🌙' : '🔆';
 }
 
 document.getElementById('darkToggle').addEventListener('click', function() { toggleDark(this); });
