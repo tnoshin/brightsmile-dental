@@ -62,7 +62,7 @@ async function loadHistory() {
         chatMessages.innerHTML = '';
         
         if (data.messages.length === 0) {
-            addMessage('assistant', "Hi! I'm BrightSmile's assistant. Ask me about our services, hours, or booking! 🦷"); //customer message with their assistant name
+            addMessage('assistant', "Hi! I'm BrightSmile's assistant. Ask me about our services, hours, or booking! 🦷"); //customise message with their assistant name
         } else {
             data.messages.forEach(msg => addMessage(msg.role, msg.content)); 
         }

@@ -1292,6 +1292,12 @@ body.dark .chat-msg.user {
 .chat-send:hover {
     background-color: #0a7fa8;
 }
+.alert{
+    font-size: 13px;
+    padding: 10px;
+    text-align: center;
+    color: #014a5d;
+}
 
 @media (max-width: 768px) {
     .chat-window {
