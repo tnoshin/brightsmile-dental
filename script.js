@@ -55,23 +55,20 @@ function addMessage(role, content) {
 async function loadHistory() {
     try {
         const res = await fetch(`${BACKEND_URL}/history`, {
-        credentials: 'include'
+            credentials: 'include'
         });
         const data = await res.json();
-        const chatMessages = document.getElementById('chatMessages');
-        chatMessages.innerHTML = '';
         
-        if (data.messages.length === 0) {
-            addMessage('assistant', "Welcome to BrightSmile! I'm here to make things easy for you. Ask me about our services, hours, or booking! What can I help you with today? "); //customise message with their assistant name
-        } else {
-            data.messages.forEach(msg => addMessage(msg.role, msg.content)); 
+        if (data.messages.length > 0) {
+            const chatMessages = document.getElementById('chatMessages');
+            chatMessages.innerHTML = '';   // clear the hardcoded greeting
+            data.messages.forEach(msg => addMessage(msg.role, msg.content));
         }
+
     } catch (err) {
         console.error('Could not load history:', err);
-        addMessage('assistant', 'Could not load previous messages.');
     }
 }
-
 async function sendMessage() {
     const input = document.getElementById('chatInput');
     const text = input.value.trim();
