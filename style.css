@@ -1235,7 +1235,6 @@ iframe {
 body.dark .chat-msg.assistant {
     background-color: #1D3D4F;
     color: white;
-    border-left: 3px solid #0891b2;
 }
 
 body.dark .chat-msg.user {
