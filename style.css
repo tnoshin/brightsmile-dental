@@ -1293,8 +1293,10 @@ body.dark .chat-msg.user {
     background-color: #0a7fa8;
 }
 .alert{
-    font-size: 13px;
+    font-size: 12px;
     padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     text-align: center;
     color: #014a5d;
 }
