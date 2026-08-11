@@ -1199,7 +1199,7 @@ iframe {
     scrollbar-color: #0891b2 transparent;
 }
 
-/* Light mode message styling */
+
 .chat-msg {
     max-width: 80%;
     padding: 10px 14px;
@@ -1231,11 +1231,6 @@ iframe {
     font-style: italic;
 }
 
-/* Dark mode message styling */
-body.dark .chat-msg.assistant {
-    background-color: #1D3D4F;
-    color: white;
-}
 
 body.dark .chat-msg.user {
     background-color: #0a7fa8;
